@@ -1,0 +1,45 @@
+spring:
+      datasource:
+        driver-class-name: com.mysql.jdbc.Driver
+        username: root
+        password: 123456
+        url: jdbc:mysql://192.168.30.173/sell?characterEncoding=utf-8&useSSL=false
+      redis:
+        host: 192.168.30.173
+        port: 6379
+#        password: 123456
+      jpa:
+        show-sql: true
+      #用来配置返回值是否为null的
+      jackson:
+        default-property-inclusion: non_null
+wechat:
+      mpAppId: wx8229adca6c3515be
+      mpAppSecret: a20e910c266d358274aceca102d97b97
+      openAppId:
+      openAppSecret:
+      mchId:
+      mchKey:
+      keyPath: /var/weixin_cert/h5.p12
+      notifyUrl: http://testopenapi.natapp1.cc/sell/pay/notify
+      templateId:
+        orderStatus:
+projectUrl:
+       wechatMpAuthorize: http://testopenapi.natapp1.cc
+       wechatOpenAuthorize: http://testopenapi.natapp1.cc
+       sell: http://testopenapi.natapp1.cc
+#logging:
+#  pattern:
+#    console: "%d - %msg%n"
+#    path: /var/log/tomcat/
+#    file: /var/log/tomcat/sell.log
+#     level:
+#          com.sell.LoggerTest: debug
+
+
+#打印日志的级别
+logging:
+    level:
+       com.sell.dataobject.mapper: trace
+mybatis:
+  mapper-locations: classpath:mapper/*.xml
